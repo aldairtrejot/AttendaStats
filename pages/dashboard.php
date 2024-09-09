@@ -305,7 +305,7 @@
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-user text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -329,8 +329,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
+                    <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -353,8 +353,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -367,7 +367,7 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Retardos</p>
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Faltas</p>
                     <h5 class="font-weight-bolder">
                       0
                     </h5>
@@ -377,8 +377,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
+                  <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -522,7 +522,7 @@
                         <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
-                    <tr>
+                  <tr>
                     <td class="w-30">
                       <div class="d-flex px-2 py-1 align-items-center">
                         <div>
@@ -702,7 +702,7 @@
   </main>
   <div class="fixed-plugin">
 
-  <!--
+    <!--
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="fa fa-cog py-2"> </i>
     </a>
