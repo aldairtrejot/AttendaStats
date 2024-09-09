@@ -168,7 +168,7 @@
           <h6 class="font-weight-bolder text-white mb-0">Inicio</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-        <!--  
+          <!--  
         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
             <div class="input-group">
               <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
@@ -177,7 +177,7 @@
           </div>
 -->
 
-<!--
+          <!--
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
@@ -348,7 +348,7 @@
                       0
                     </h5>
                     <p class="mb-0">
-                    <span class="text-success text-sm font-weight-bolder"> +0 </span> Tiempo real
+                      <span class="text-success text-sm font-weight-bolder"> +0 </span> Tiempo real
                     </p>
                   </div>
                 </div>
@@ -390,15 +390,15 @@
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-              <h6 class="text-capitalize">Sales overview</h6>
+              <h6 class="text-capitalize">Control de faltas</h6>
               <p class="text-sm mb-0">
                 <i class="fa fa-arrow-up text-success"></i>
-                <span class="font-weight-bold">4% more</span> in 2021
+                <span class="font-weight-bold">0% M&aacutes - Por quincena</span>
               </p>
             </div>
             <div class="card-body p-3">
               <div class="chart">
-                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+                <canvas id="chart-line" class="chart-canvas" height="0"></canvas>
               </div>
             </div>
           </div>
@@ -413,8 +413,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-camera-compact text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Get started with Argon</h5>
-                    <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
+                    <h5 class="text-white mb-1">Actualizaci&oacuten</h5>
+                    <p>Aquí encontrarás información sobre las próximas actualizaciones del sistema.</p>
                   </div>
                 </div>
                 <div class="carousel-item h-100" style="background-image: url('../assets/img/carousel-2.jpg');
@@ -423,9 +423,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-bulb-61 text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Faster way to create web pages</h5>
-                    <p>That’s my skill. I’m not really specifically talented at anything except for the ability to
-                      learn.</p>
+                    <h5 class="text-white mb-1">Actualizaci&oacuten</h5>
+                    <p>Aquí encontrarás información sobre las próximas actualizaciones del sistema.</p>
                   </div>
                 </div>
                 <div class="carousel-item h-100" style="background-image: url('../assets/img/carousel-3.jpg');
@@ -434,8 +433,8 @@
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-trophy text-dark opacity-10"></i>
                     </div>
-                    <h5 class="text-white mb-1">Share with us your design tips!</h5>
-                    <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
+                    <h5 class="text-white mb-1">Actualizaci&oacuten</h5>
+                    <p>Aquí encontrarás información sobre las próximas actualizaciones del sistema.</p>
                   </div>
                 </div>
               </div>
@@ -458,7 +457,7 @@
           <div class="card ">
             <div class="card-header pb-0 p-3">
               <div class="d-flex justify-content-between">
-                <h6 class="mb-2">Sales by Country</h6>
+                <h6 class="mb-2">Empleados</h6>
               </div>
             </div>
             <div class="table-responsive">
@@ -468,30 +467,29 @@
                     <td class="w-30">
                       <div class="d-flex px-2 py-1 align-items-center">
                         <div>
-                          <img src="../assets/img/icons/flags/US.png" alt="Country flag">
                         </div>
                         <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">United States</h6>
+                          <p class="text-xs font-weight-bold mb-0">R.F.C:</p>
+                          <h6 class="text-sm mb-0">-</h6>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">2500</h6>
+                        <p class="text-xs font-weight-bold mb-0">Asistencias:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$230,900</h6>
+                        <p class="text-xs font-weight-bold mb-0">Faltas:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td class="align-middle text-sm">
                       <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">29.9%</h6>
+                        <p class="text-xs font-weight-bold mb-0">Retardos:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                   </tr>
@@ -499,30 +497,58 @@
                     <td class="w-30">
                       <div class="d-flex px-2 py-1 align-items-center">
                         <div>
-                          <img src="../assets/img/icons/flags/DE.png" alt="Country flag">
                         </div>
                         <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Germany</h6>
+                          <p class="text-xs font-weight-bold mb-0">R.F.C:</p>
+                          <h6 class="text-sm mb-0">-</h6>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">3.900</h6>
+                        <p class="text-xs font-weight-bold mb-0">Asistencias:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$440,000</h6>
+                        <p class="text-xs font-weight-bold mb-0">Faltas:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td class="align-middle text-sm">
                       <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">40.22%</h6>
+                        <p class="text-xs font-weight-bold mb-0">Retardos:</p>
+                        <h6 class="text-sm mb-0">0</h6>
+                      </div>
+                    </td>
+                    <tr>
+                    <td class="w-30">
+                      <div class="d-flex px-2 py-1 align-items-center">
+                        <div>
+                        </div>
+                        <div class="ms-4">
+                          <p class="text-xs font-weight-bold mb-0">R.F.C:</p>
+                          <h6 class="text-sm mb-0">-</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="text-center">
+                        <p class="text-xs font-weight-bold mb-0">Asistencias:</p>
+                        <h6 class="text-sm mb-0">0</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="text-center">
+                        <p class="text-xs font-weight-bold mb-0">Faltas:</p>
+                        <h6 class="text-sm mb-0">0</h6>
+                      </div>
+                    </td>
+                    <td class="align-middle text-sm">
+                      <div class="col text-center">
+                        <p class="text-xs font-weight-bold mb-0">Retardos:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                   </tr>
@@ -530,61 +556,29 @@
                     <td class="w-30">
                       <div class="d-flex px-2 py-1 align-items-center">
                         <div>
-                          <img src="../assets/img/icons/flags/GB.png" alt="Country flag">
                         </div>
                         <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Great Britain</h6>
+                          <p class="text-xs font-weight-bold mb-0">R.F.C:</p>
+                          <h6 class="text-sm mb-0">-</h6>
                         </div>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">1.400</h6>
+                        <p class="text-xs font-weight-bold mb-0">Asistencias:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$190,700</h6>
+                        <p class="text-xs font-weight-bold mb-0">Faltas:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                     <td class="align-middle text-sm">
                       <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">23.44%</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="../assets/img/icons/flags/BR.png" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Brasil</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">562</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$143,960</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">32.14%</h6>
+                        <p class="text-xs font-weight-bold mb-0">Retardos:</p>
+                        <h6 class="text-sm mb-0">0</h6>
                       </div>
                     </td>
                   </tr>
@@ -596,18 +590,18 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Categories</h6>
+              <h6 class="mb-0">Periodo</h6>
             </div>
             <div class="card-body p-3">
               <ul class="list-group">
                 <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                   <div class="d-flex align-items-center">
                     <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-mobile-button text-white opacity-10"></i>
+                      <i class="ni ni-tag text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Devices</h6>
-                      <span class="text-xs">250 in stock, <span class="font-weight-bold">346+ sold</span></span>
+                      <h6 class="mb-1 text-dark text-sm">Primer periodo 2024</h6>
+                      <span class="text-xs">250 in stock, <span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -621,8 +615,8 @@
                       <i class="ni ni-tag text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Tickets</h6>
-                      <span class="text-xs">123 closed, <span class="font-weight-bold">15 open</span></span>
+                      <h6 class="mb-1 text-dark text-sm">Segundo periodo 2024</h6>
+                      <span class="text-xs">123 closed, <span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -633,11 +627,11 @@
                 <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                   <div class="d-flex align-items-center">
                     <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-box-2 text-white opacity-10"></i>
+                      <i class="ni ni-tag text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Error logs</h6>
-                      <span class="text-xs">1 is active, <span class="font-weight-bold">40 closed</span></span>
+                      <h6 class="mb-1 text-dark text-sm">Primer periodo 2025</h6>
+                      <span class="text-xs">1 is active, <span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -648,10 +642,10 @@
                 <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
                   <div class="d-flex align-items-center">
                     <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-satisfied text-white opacity-10"></i>
+                      <i class="ni ni-tag text-white opacity-10"></i>
                     </div>
                     <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Happy users</h6>
+                      <h6 class="mb-1 text-dark text-sm">Segundo Periodo 2025</h6>
                       <span class="text-xs font-weight-bold">+ 430</span>
                     </div>
                   </div>
@@ -665,6 +659,8 @@
           </div>
         </div>
       </div>
+
+      <!--
       <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">
@@ -700,12 +696,17 @@
           </div>
         </div>
       </footer>
+-->
+
     </div>
   </main>
   <div class="fixed-plugin">
+
+  <!--
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="fa fa-cog py-2"> </i>
     </a>
+-->
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3 ">
         <div class="float-start">
@@ -800,9 +801,9 @@
     new Chart(ctx1, {
       type: "line",
       data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["Quincena 1", "Quincena 2", "Quincena 3", "Quincena 4", "Quincena 5", "Quincena 6", "Quincena 7", "Quincena 8", "Quincena 9"],
         datasets: [{
-          label: "Mobile apps",
+          label: "Faltas",
           tension: 0.4,
           borderWidth: 0,
           pointRadius: 0,
@@ -810,7 +811,7 @@
           backgroundColor: gradientStroke1,
           borderWidth: 3,
           fill: true,
-          data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
           maxBarThickness: 6
 
         }],
