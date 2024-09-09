@@ -55,7 +55,7 @@
           <a class="nav-link" href="../pages/dashboard.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+              <i class="fa fa-home text-primary text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Inicio</span>
           </a>
@@ -64,7 +64,7 @@
           <a class="nav-link " href="#">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+              <i class="fa fa-file-text-o text-dark  text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Asistecnias</span>
           </a>
@@ -73,7 +73,16 @@
           <a class="nav-link " href="#">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+              <i class="fa fa-users text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Empleados</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-cog text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Administraci&oacuten</span>
           </a>
@@ -82,7 +91,7 @@
           <a class="nav-link " href="../login.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class=" text-dark text-sm opacity-10"></i>
+              <i class="fa fa-sign-out text-dark text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Salir</span>
           </a>
@@ -378,7 +387,7 @@
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                  <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -601,7 +610,7 @@
                     </div>
                     <div class="d-flex flex-column">
                       <h6 class="mb-1 text-dark text-sm">Primer periodo 2024</h6>
-                      <span class="text-xs">250 in stock, <span class="font-weight-bold"></span></span>
+                      <span class="text-xs"><span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -616,7 +625,7 @@
                     </div>
                     <div class="d-flex flex-column">
                       <h6 class="mb-1 text-dark text-sm">Segundo periodo 2024</h6>
-                      <span class="text-xs">123 closed, <span class="font-weight-bold"></span></span>
+                      <span class="text-xs"><span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -631,7 +640,7 @@
                     </div>
                     <div class="d-flex flex-column">
                       <h6 class="mb-1 text-dark text-sm">Primer periodo 2025</h6>
-                      <span class="text-xs">1 is active, <span class="font-weight-bold"></span></span>
+                      <span class="text-xs"><span class="font-weight-bold"></span></span>
                     </div>
                   </div>
                   <div class="d-flex">
@@ -646,7 +655,7 @@
                     </div>
                     <div class="d-flex flex-column">
                       <h6 class="mb-1 text-dark text-sm">Segundo Periodo 2025</h6>
-                      <span class="text-xs font-weight-bold">+ 430</span>
+                      <span class="text-xs font-weight-bold"></span>
                     </div>
                   </div>
                   <div class="d-flex">
