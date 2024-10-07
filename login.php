@@ -45,13 +45,13 @@
   <!-- End Navbar -->
 
   <main class="main-content mt-0">
-    
-<!--
+
+    <!--
 <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
       style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;">
 
 -->
-<div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
+    <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
       style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;">
 
       <span class="mask bg-gradient-dark opacity-6"></span>
@@ -75,10 +75,10 @@
             <div class="card-body">
               <form role="form">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Usuario" aria-label="Name">
+                  <input type="text" id="_usuario" class="form-control" placeholder="Usuario" aria-label="Name">
                 </div>
                 <div class="mb-3">
-                  <input type="password" class="form-control" placeholder="Contraseña" aria-label="Password">
+                  <input type="password" id="_pw" class="form-control" placeholder="Contraseña" aria-label="Password">
                 </div>
                 <div class="form-check form-check-info text-start">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
@@ -171,7 +171,7 @@
 
   <!-- Toastr JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Custom JS for handling the form -->
   <script>
     $(document).ready(function () {
@@ -179,6 +179,35 @@
         let user = $('input[placeholder="Usuario"]').val().trim();
         let password = $('input[placeholder="Contraseña"]').val().trim();
 
+
+        if (user === "") {
+          error("Campo usuario es requerido");
+        } else if (password === "") {
+          error("Campo contrasena es requerido");
+        } else {
+          $.ajax({
+            type: 'POST',
+            url: 'login_validate.php',
+            data: {
+              user: user,
+              password: password
+            },
+            success: function (data) {
+              if (data == 1) {
+                window.location.href = 'pages/dashboard.php';
+              } else {
+                error('Usuario o contraseña incorrectos');
+              }
+
+              $('#_usuario').val('');
+              $('#_pw').val('');
+            }
+          });
+        }
+
+
+
+        /*
         if (user === "") {
           toastr.warning("Campo usuario es requerido");
         } else if (password === "") {
@@ -190,9 +219,28 @@
             toastr.error("Usuario o contrasena incorrectos.");
           }
         }
+          */
 
       });
     });
+
+    function error(text) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "error",
+        title: text
+      });
+    }
   </script>
 </body>
 
