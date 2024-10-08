@@ -40,6 +40,38 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    p {
+      margin: 0;
+      /* Elimina el margen por defecto del párrafo */
+    }
+
+    .input-usuario,
+    .select-usuario,
+    .btn-enviar {
+      border: 2px solid #ccc;
+      /* Color gris claro */
+      border-radius: 20px;
+      /* Bordes circulares */
+      padding: 5px;
+      /* Espacio interno reducido */
+      margin-bottom: 15px;
+      /* Espacio entre inputs */
+      width: calc(100% - 24px);
+      /* Ajusta el ancho del input */
+      box-sizing: border-box;
+      /* Incluye el padding en el ancho total */
+      font-size: 14px;
+      /* Tamaño de fuente reducido */
+    }
+
+    .btn-enviar:hover {
+      background-color: #f0f0f0;
+      /* Color de fondo al pasar el mouse */
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -138,8 +170,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Empleados</p>
-                    <h5 class="font-weight-bolder">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de usuarios</p>
+                    <h5 class="font-weight-bolder" id="total_usuarios">
                       0
                     </h5>
                     <p class="mb-0">
@@ -163,10 +195,10 @@
         <div class="col-lg-7 mb-lg-0 mb-4">
           <div class="card z-index-2 h-100">
             <div class="card-header pb-0 pt-3 bg-transparent">
-              <h6 class="text-capitalize">Control de faltas</h6>
+              <h6 class="text-capitalize">rEGISTRO DE USUARIOS</h6>
               <p class="text-sm mb-0">
                 <i class="fa fa-arrow-up text-success"></i>
-                <span class="font-weight-bold">0% M&aacutes - Por quincena</span>
+                <span class="font-weight-bold">Distribución por ROLES</span>
               </p>
             </div>
             <div class="card-body p-3">
@@ -179,70 +211,31 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Periodo</h6>
+              <h6 class="mb-0">Agregar usuario</h6>
             </div>
             <div class="card-body p-3">
               <ul class="list-group">
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-tag text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Primer periodo 2024</h6>
-                      <span class="text-xs"><span class="font-weight-bold"></span></span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i
-                        class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-tag text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Segundo periodo 2024</h6>
-                      <span class="text-xs"><span class="font-weight-bold"></span></span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i
-                        class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-tag text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Primer periodo 2025</h6>
-                      <span class="text-xs"><span class="font-weight-bold"></span></span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i
-                        class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
-                <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                      <i class="ni ni-tag text-white opacity-10"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                      <h6 class="mb-1 text-dark text-sm">Segundo Periodo 2025</h6>
-                      <span class="text-xs font-weight-bold"></span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i
-                        class="ni ni-bold-right" aria-hidden="true"></i></button>
-                  </div>
-                </li>
+
+                <p>Nombre*</p>
+                <input id="nombre_" type="text" class="input-usuario" maxlength="30">
+
+                <p>Nick*</p>
+                <input id="nick_" type="text" class="input-usuario" maxlength="30">
+
+                <p>Password*</p>
+                <input id="password_" type="password" class="input-usuario" maxlength="30">
+
+                <p>Email*</p>
+                <input id="email_" type="email" class="input-usuario" maxlength="30">
+
+                <p>ROLE*</p>
+                <select id="role_" class="select-usuario">
+                  <option value="2">ROLE_USER</option>
+                  <option value="1">ROLE_ADMINISTRADOR</option>
+                </select>
+
+                <button onclick="validar();" class="btn-enviar">Enviar</button>
+
               </ul>
             </div>
           </div>
@@ -447,97 +440,199 @@
   <script>
 
     $(document).ready(function () {
-      console.log("ready!");
+      calcular();
     });
 
 
-    
+    function validar() {
+      let nombre_ = document.getElementById("nombre_").value;
+      let nick_ = document.getElementById("nick_").value;
+      let password_ = document.getElementById("password_").value;
+      let email_ = document.getElementById("email_").value;
+      let role_ = document.getElementById("role_").value;
 
 
+      if (validarData(nombre_, 'Nombre') &&
+        validarData(nick_, 'Nick') &&
+        validarData(password_, 'Password') &&
+        validarData(email_, 'Email') &&
+        validarData(role_, 'ROLE')) {
+        console.log('success');
+      }
+    }
 
-
-
-    var ctx1 = document.getElementById("chart-line").getContext("2d");
-
-    var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
-
-    gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
-    gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
-    gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
-    new Chart(ctx1, {
-      type: "line",
-      data: {
-        labels: ["Quincena 1", "Quincena 2", "Quincena 3", "Quincena 4", "Quincena 5", "Quincena 6", "Quincena 7", "Quincena 8", "Quincena 9"],
-        datasets: [{
-          label: "Faltas",
-          tension: 0.4,
-          borderWidth: 0,
-          pointRadius: 0,
-          borderColor: "#5e72e4",
-          backgroundColor: gradientStroke1,
-          borderWidth: 3,
-          fill: true,
-          data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-          maxBarThickness: 6
-
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-          }
+    function guardarUser(nombre_, nick_, password_, email_, role_) {
+      $.ajax({
+        type: 'POST',
+        url: 'guardar_usuario.php',
+        data: {
+          nombre_: nombre_,
+          nick_: nick_,
+          password_: password_,
+          email_: email_,
+          role_: role_
         },
-        interaction: {
-          intersect: false,
-          mode: 'index',
-        },
-        scales: {
-          y: {
-            grid: {
-              drawBorder: false,
-              display: true,
-              drawOnChartArea: true,
-              drawTicks: false,
-              borderDash: [5, 5]
+        success: function (data) {
+          console.log(data);
+        }
+      });
+    }
+
+    function messageError(text) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "error",
+        title: text
+      });
+    }
+
+    function messageSuccess(text) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: text
+      });
+    }
+
+    function validarData(data, text) {
+      let bool = true;
+      if (validarNull(data)) {
+        messageError('Campo ' + text + '* no puede estar vacio.');
+        bool = false;
+      }
+      return bool;
+    }
+
+
+    function validarNull(cadena) {
+      let bool = false;
+      if (cadena.length === 0) {
+        bool = true;
+      }
+      return bool;
+    }
+
+    function calcular() {
+      $.ajax({
+        type: 'POST',
+        url: 'admin_resulta.php',
+        data: {},
+        success: function (data) {
+          let jsonData = JSON.parse(data);
+
+          document.getElementById("total_usuarios").innerText = jsonData.count;
+
+
+          var ctx1 = document.getElementById("chart-line").getContext("2d");
+
+          var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
+
+          gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
+          gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
+          gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
+          new Chart(ctx1, {
+            type: "line",
+            data: {
+              labels: ["ROLE_ADMINISTRADOR", "ROLE_USUARIO"],
+              datasets: [{
+                label: "Usuarios",
+                tension: 0.4,
+                borderWidth: 0,
+                pointRadius: 0,
+                borderColor: "#5e72e4",
+                backgroundColor: gradientStroke1,
+                borderWidth: 3,
+                fill: true,
+                data: [jsonData.admin, jsonData.user],
+                maxBarThickness: 6
+
+              }],
             },
-            ticks: {
-              display: true,
-              padding: 10,
-              color: '#fbfbfb',
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: {
+                  display: false,
+                }
               },
-            }
-          },
-          x: {
-            grid: {
-              drawBorder: false,
-              display: false,
-              drawOnChartArea: false,
-              drawTicks: false,
-              borderDash: [5, 5]
+              interaction: {
+                intersect: false,
+                mode: 'index',
+              },
+              scales: {
+                y: {
+                  grid: {
+                    drawBorder: false,
+                    display: true,
+                    drawOnChartArea: true,
+                    drawTicks: false,
+                    borderDash: [5, 5]
+                  },
+                  ticks: {
+                    display: true,
+                    padding: 10,
+                    color: '#fbfbfb',
+                    font: {
+                      size: 11,
+                      family: "Open Sans",
+                      style: 'normal',
+                      lineHeight: 2
+                    },
+                  }
+                },
+                x: {
+                  grid: {
+                    drawBorder: false,
+                    display: false,
+                    drawOnChartArea: false,
+                    drawTicks: false,
+                    borderDash: [5, 5]
+                  },
+                  ticks: {
+                    display: true,
+                    color: '#ccc',
+                    padding: 20,
+                    font: {
+                      size: 11,
+                      family: "Open Sans",
+                      style: 'normal',
+                      lineHeight: 2
+                    },
+                  }
+                },
+              },
             },
-            ticks: {
-              display: true,
-              color: '#ccc',
-              padding: 20,
-              font: {
-                size: 11,
-                family: "Open Sans",
-                style: 'normal',
-                lineHeight: 2
-              },
-            }
-          },
-        },
-      },
-    });
+          });
+        }
+      });
+    }
+
+
+
+
+
+
   </script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
