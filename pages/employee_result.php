@@ -2,9 +2,9 @@
 
 include '../conexion.php';
 
-$count = returnArrayById(pg_query("SELECT COUNT (*) FROM administracion.usuario;"));
-$admin = returnArrayById(pg_query("SELECT COUNT (*) FROM administracion.usuario WHERE id_rol = 1"));
-$user = returnArrayById(pg_query("SELECT COUNT (*) FROM administracion.usuario WHERE id_rol = 2"));
+$allEmployee = returnArrayById(pg_query("SELECT COUNT (*) FROM empleados.empleado;"));
+$bajaEmployee = returnArrayById(pg_query("SELECT COUNT (*) FROM empleados.empleado WHERE id_estatus = 2"));
+$altaEmployee = returnArrayById(pg_query("SELECT COUNT (*) FROM empleados.empleado WHERE id_estatus = 1"));
 
 
 
@@ -12,9 +12,9 @@ $user = returnArrayById(pg_query("SELECT COUNT (*) FROM administracion.usuario W
 
 
 $var = [
-    'count' => $count[0],
-    'admin' => $admin[0],
-    'user' => $user[0],
+    'allEmployee' => $allEmployee[0],
+    'bajaEmployee' => $bajaEmployee[0],
+    'altaEmployee' => $altaEmployee[0],
 ];
 echo json_encode($var);
 

@@ -171,7 +171,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de empleados</p>
-                    <h5 class="font-weight-bolder" id="total_usuarios">
+                    <h5 class="font-weight-bolder" id="all_employee">
                       0
                     </h5>
                     <p class="mb-0">
@@ -197,7 +197,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de empleados activos</p>
-                    <h5 class="font-weight-bolder" id="total_usuarios">
+                    <h5 class="font-weight-bolder" id="activo_employee">
                       0
                     </h5>
                     <p class="mb-0">
@@ -223,7 +223,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de empleados inactivos</p>
-                    <h5 class="font-weight-bolder" id="total_usuarios">
+                    <h5 class="font-weight-bolder" id="baja_employee">
                       0
                     </h5>
                     <p class="mb-0">
@@ -244,23 +244,7 @@
       </div>
 
       <div class="row mt-4">
-        <div class="col-lg-7 mb-lg-0 mb-4">
-          <div class="card z-index-2 h-100">
-            <div class="card-header pb-0 pt-3 bg-transparent">
-              <h6 class="text-capitalize">rEGISTRO DE USUARIOS</h6>
-              <p class="text-sm mb-0">
-                <i class="fa fa-arrow-up text-success"></i>
-                <span class="font-weight-bold">Distribución por ROLES</span>
-              </p>
-            </div>
-            <div class="card-body p-3">
-              <div class="chart">
-                <canvas id="chart-line" class="chart-canvas" height="0"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
+        <div class="col-lg-12">
           <div class="card">
             <div class="card-header pb-0 p-3">
               <h6 class="mb-0">Agregar usuario</h6>
@@ -268,23 +252,47 @@
             <div class="card-body p-3">
               <ul class="list-group">
 
-                <p>Nombre*</p>
-                <input id="nombre_" type="text" class="input-usuario" maxlength="30">
+                <div class="row">
+                  <div class="col-6">
+                    <p>Nombre completo*</p>
+                    <input id="nombre_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                  <div class="col-6">
+                    <p>CURP*</p>
+                    <input id="curp_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                </div>
 
-                <p>Nick*</p>
-                <input id="nick_" type="text" class="input-usuario" maxlength="30">
+                <div class="row">
+                  <div class="col-6">
+                    <p>RFC*</p>
+                    <input id="rfc_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                  <div class="col-6">
+                    <p>Correo*</p>
+                    <input id="correo_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                </div>
 
-                <p>Password*</p>
-                <input id="password_" type="password" class="input-usuario" maxlength="30">
+                <div class="row">
+                  <div class="col-4">
+                    <p>Telefono*</p>
+                    <input id="telefono_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                  <div class="col-4">
+                    <p>No Dispositov*</p>
+                    <input id="no_dis_" type="text" class="input-usuario" maxlength="30">
+                  </div>
+                  <div class="col-4">
+                    <p>Estatus*</p>
+                    <select id="estatus_" class="select-usuario">
+                      <option value="1">ACTIVO</option>
+                      <option value="2">BAJA</option>
+                    </select>
+                  </div>
+                </div>
 
-                <p>Email*</p>
-                <input id="email_" type="email" class="input-usuario" maxlength="30">
 
-                <p>ROLE*</p>
-                <select id="role_" class="select-usuario">
-                  <option value="2">ROLE_USER</option>
-                  <option value="1">ROLE_ADMINISTRADOR</option>
-                </select>
 
                 <button onclick="validar();" class="btn-enviar">Enviar</button>
 
@@ -312,43 +320,57 @@
                 <?php
 
                 $listado = pg_query("SELECT * 
-                                    FROM administracion.usuario
-                                    INNER JOIN  administracion.rol
-                                      ON administracion.usuario.id_rol =
-                                        administracion.rol.id_rol 
-                                    ORDER BY administracion.usuario.id_usuario DESC
-                                    LIMIT 5;");
+                                    FROM empleados.empleado
+                                    INNER JOIN empleados.estatus
+                                      ON empleados.empleado.id_estatus =
+                                        empleados.estatus.id_estatus
+                                    ORDER BY id_empleado desc 
+                                    LIMIT 5");
 
                 if (pg_num_rows($listado) > 0) {
                   while ($row = pg_fetch_row($listado)) {
                     echo ' <tbody>
                   <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Nombre</p>
-                          <h6 class="text-sm mb-0">' . $row[1] . '</h6>
-                        </div>
+                    <td>
+                      <div class="text-center">
+                        <p class="text-xs font-weight-bold mb-0">Nombre</p>
+                        <h6 class="text-sm mb-0">' . $row[1] . '</h6>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Nick</p>
+                        <p class="text-xs font-weight-bold mb-0">CURP</p>
                         <h6 class="text-sm mb-0">' . $row[2] . '</h6>
                       </div>
                     </td>
                     <td>
                       <div class="text-center">
+                        <p class="text-xs font-weight-bold mb-0">RFC</p>
+                        <h6 class="text-sm mb-0">' . $row[3] . '</h6>
+                      </div>
+                    </td>
+                    <td class="align-middle text-sm">
+                      <div class="col text-center">
                         <p class="text-xs font-weight-bold mb-0">E-mail</p>
                         <h6 class="text-sm mb-0">' . $row[4] . '</h6>
                       </div>
                     </td>
                     <td class="align-middle text-sm">
                       <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">ROLE</p>
-                        <h6 class="text-sm mb-0">' . $row[7] . '</h6>
+                        <p class="text-xs font-weight-bold mb-0">Telefono</p>
+                        <h6 class="text-sm mb-0">' . $row[5] . '</h6>
+                      </div>
+                    </td>
+                    <td class="align-middle text-sm">
+                      <div class="col text-center">
+                        <p class="text-xs font-weight-bold mb-0">No Dispositivo</p>
+                        <h6 class="text-sm mb-0">' . $row[6] . '</h6>
+                      </div>
+                    </td>
+                    <td class="align-middle text-sm">
+                      <div class="col text-center">
+                        <p class="text-xs font-weight-bold mb-0">Estatus</p>
+                        <h6 class="text-sm mb-0">' . $row[9] . '</h6>
                       </div>
                     </td>
                   </tr>
@@ -500,46 +522,54 @@
 
     function validar() {
       let nombre_ = document.getElementById("nombre_").value;
-      let nick_ = document.getElementById("nick_").value;
-      let password_ = document.getElementById("password_").value;
-      let email_ = document.getElementById("email_").value;
-      let role_ = document.getElementById("role_").value;
+      let curp_ = document.getElementById("curp_").value;
+      let rfc_ = document.getElementById("rfc_").value;
+      let correo_ = document.getElementById("correo_").value;
+      let telefono_ = document.getElementById("telefono_").value;
+      let no_dis_ = document.getElementById("no_dis_").value;
+      let estatus_ = document.getElementById("estatus_").value;
 
 
-      if (validarData(nombre_, 'Nombre') &&
-        validarData(nick_, 'Nick') &&
-        validarData(password_, 'Password') &&
-        validarData(email_, 'Email') &&
-        validarData(role_, 'ROLE')) {
-        guardarUser(nombre_, nick_, password_, email_, role_);
+      if (validarData(nombre_, 'Nombre completo') &&
+        validarData(curp_, 'CURP') &&
+        validarData(rfc_, 'RFC') &&
+        validarData(correo_, 'Correo') &&
+        validarData(telefono_, 'Telefono') &&
+        validarData(no_dis_, 'No Disposito') &&
+        validarData(estatus_, 'Estatus')) {
+        saveEmployee(nombre_, curp_, rfc_, correo_, telefono_, no_dis_, estatus_);
       }
     }
 
-    function guardarUser(nombre_, nick_, password_, email_, role_) {
+    function saveEmployee(nombre_, curp_, rfc_, correo_, telefono_, no_dis_, estatus_) {
       $.ajax({
         type: 'POST',
-        url: 'guardar_usuario.php',
+        url: 'guardar_empleado.php',
         data: {
           nombre_: nombre_,
-          nick_: nick_,
-          password_: password_,
-          email_: email_,
-          role_: role_
+          curp_: curp_,
+          rfc_: rfc_,
+          correo_: correo_,
+          telefono_: telefono_,
+          no_dis_: no_dis_,
+          estatus_: estatus_
         },
         success: function (data) {
           if (data) {
-            messageSuccess('Usuario agregado con éxito');
+            messageSuccess('Empleado agregado con éxito');
             location.reload();
             //calcular();
           } else {
-            messageError('Se produjo un error al registrar el usuario. Por favor, vuelve a intentarlo.');
+            messageError('Se produjo un error al registrar el empleado. Por favor, vuelve a intentarlo.');
           }
 
           $('#nombre_').val('');
-          $('#nick_').val('');
-          $('#password_').val('')
-          $('#email_').val('')
-          $('#role_').val('')
+          $('#curp_').val('');
+          $('#rfc_').val('');
+          $('#correo_').val('');
+          $('#telefono_').val('');
+          $('#no_dis_').val('');
+          $('#estatus_').val('');
 
         }
       });
@@ -605,92 +635,14 @@
         url: 'employee_result.php',
         data: {},
         success: function (data) {
+
           let jsonData = JSON.parse(data);
 
-          document.getElementById("total_usuarios").innerText = jsonData.count;
+          document.getElementById("all_employee").innerText = jsonData.allEmployee;
+          document.getElementById("baja_employee").innerText = jsonData.bajaEmployee;
+          document.getElementById("activo_employee").innerText = jsonData.altaEmployee;
 
 
-          var ctx1 = document.getElementById("chart-line").getContext("2d");
-
-          var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
-
-          gradientStroke1.addColorStop(1, 'rgba(94, 114, 228, 0.2)');
-          gradientStroke1.addColorStop(0.2, 'rgba(94, 114, 228, 0.0)');
-          gradientStroke1.addColorStop(0, 'rgba(94, 114, 228, 0)');
-          new Chart(ctx1, {
-            type: "line",
-            data: {
-              labels: ["ROLE_ADMINISTRADOR", "ROLE_USUARIO"],
-              datasets: [{
-                label: "Usuarios",
-                tension: 0.4,
-                borderWidth: 0,
-                pointRadius: 0,
-                borderColor: "#5e72e4",
-                backgroundColor: gradientStroke1,
-                borderWidth: 3,
-                fill: true,
-                data: [jsonData.admin, jsonData.user],
-                maxBarThickness: 6
-
-              }],
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: {
-                  display: false,
-                }
-              },
-              interaction: {
-                intersect: false,
-                mode: 'index',
-              },
-              scales: {
-                y: {
-                  grid: {
-                    drawBorder: false,
-                    display: true,
-                    drawOnChartArea: true,
-                    drawTicks: false,
-                    borderDash: [5, 5]
-                  },
-                  ticks: {
-                    display: true,
-                    padding: 10,
-                    color: '#fbfbfb',
-                    font: {
-                      size: 11,
-                      family: "Open Sans",
-                      style: 'normal',
-                      lineHeight: 2
-                    },
-                  }
-                },
-                x: {
-                  grid: {
-                    drawBorder: false,
-                    display: false,
-                    drawOnChartArea: false,
-                    drawTicks: false,
-                    borderDash: [5, 5]
-                  },
-                  ticks: {
-                    display: true,
-                    color: '#ccc',
-                    padding: 20,
-                    font: {
-                      size: 11,
-                      family: "Open Sans",
-                      style: 'normal',
-                      lineHeight: 2
-                    },
-                  }
-                },
-              },
-            },
-          });
         }
       });
     }
