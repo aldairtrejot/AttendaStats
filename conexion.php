@@ -1,5 +1,5 @@
 <?php
-$password = "pg2024";
+$password = "pg2024";//admin
 $username = "postgres";
 $dbname = "attenda";
 $host = "localhost";

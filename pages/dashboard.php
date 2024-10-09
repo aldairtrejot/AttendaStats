@@ -56,7 +56,7 @@
     </div>
     <hr class="horizontal dark mt-0">
 
-    
+
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -78,7 +78,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">
+          <a class="nav-link " href="employee.php">
             <div
               class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa fa-users text-dark text-sm opacity-10"></i>
@@ -286,7 +286,7 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
+                  <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
                     <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -310,8 +310,8 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                    <i class="fa fa-file-o text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>

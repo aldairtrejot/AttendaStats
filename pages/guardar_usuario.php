@@ -13,7 +13,7 @@ $datos = [
 $_IS_RESULT = pg_insert($connectionDBsPro, 'administracion.usuario', $datos);
 
 
-if ($_IS_RESULT) {
+if ($_IS_RESULT == true) {
     echo true;
 } else {
     echo false;
